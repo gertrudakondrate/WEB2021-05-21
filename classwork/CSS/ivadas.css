@@ -4,7 +4,38 @@ strong{
 p{
     color: brown;
 }
-
+/* klases selektorius */
 .antras{
     color: coral;
+}
+/* id selektorius */
+#isskirtinis{
+    background-color: white;
+}
+/* atributu selektorius */
+[style]{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+[type]{
+    background-color: chartreuse;
+}
+[type="text"]{
+    box-shadow: 2px 2px 5px black;
+}
+/* $ reiskia baigiasi ta raide*/
+[type$="t"]{
+    height: 50px;
+}
+/* visi elementai keiciami*/
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+/* isvardinti elementai, kuriu norim. Padding zona- nuo turinio iki elemento pradzios space'as. Pacheking margin zona!*/
+
+h1, p, .antras, #isskirtinis{
+    padding: 5px;
+}
+/* gylio selectoriai*/
+form input{
+    font-size: 20pt;
 }

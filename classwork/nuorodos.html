@@ -1,35 +1,92 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* pseudo klases*/
+        /* hover (uzvedus ant ju keistusi)*/
+        a {
+            color: black;
+            text-decoration: none;
+            padding: 5px;
+        }
+
+        a:hover {
+            color: white;
+            background-color: black;
+            text-decoration: underline;
+        }
+
+        /* pirmas elementas, TURI BUTI BUTINAI visi ivynioti i tarkim div. 
+        Tinka ir lentelems, sarasams etc. (tarkim kas antra eilute spalvinti. Galima parodyti nuo kurio pradeti + 1*/
+        p:first-child {
+            color: red;
+            text-transform: capitalize;
+        }
+        p:nth-child(3n+2){
+            background-color:rgb(26, 71, 34, 0.5);
+            text-transform: uppercase;
+        }
+
+        .begin{
+            position: fixed;
+            padding: 20px;
+            background-color: rgba(255, 100, 1, 0.5);
+        }
+
+        .content{
+            margin-left: 150px;
+        }
+
+    </style>
 </head>
+
 <body>
     <H1>Nuorodos</H1>
     <!-- nuoroda i isorini adresa -->
     <!-- elementai a yra linijiniai -->
-<a href="https://www.vilniuscoding.lt" target="_blank">Mokslai</a>
+    <a href="https://www.vilniuscoding.lt" target="_blank">Mokslai</a>
 
-<a href="https://game.capcom.com/residentevil/en/">Grazus kaciukai - paspausk!</a>
+    <a href="https://game.capcom.com/residentevil/en/">Grazus kaciukai - paspausk!</a>
 
-<!-- nuoroda i vidinius saltinius -->
-<a href="index.html">Pagrindinis</a>
-<a href="sarasai.html">Sarasai</a>
+    <!-- nuoroda i vidinius saltinius -->
+    <a href="index.html">Pagrindinis</a>
+    <a href="sarasai.html">Sarasai</a>
 
-<!-- nuorodos i ta pati puslapi -->
-<a href="#contacts">Kontaktai</a>
+    <!-- nuorodos i ta pati puslapi -->
+    <a href="#contacts">Kontaktai</a>
 
-<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi amet voluptatibus ipsa! Vero, quasi quis? Ipsum doloremque ducimus, pariatur necessitatibus modi architecto provident. Nam at similique sapiente possimus, ipsa labore?</p>
-<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi amet voluptatibus ipsa! Vero, quasi quis? Ipsum doloremque ducimus, pariatur necessitatibus modi architecto provident. Nam at similique sapiente possimus, ipsa labore?</p>
-<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi amet voluptatibus ipsa! Vero, quasi quis? Ipsum doloremque ducimus, pariatur necessitatibus modi architecto provident. Nam at similique sapiente possimus, ipsa labore?</p>
-<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi amet voluptatibus ipsa! Vero, quasi quis? Ipsum doloremque ducimus, pariatur necessitatibus modi architecto provident. Nam at similique sapiente possimus, ipsa labore?</p>
-<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi amet voluptatibus ipsa! Vero, quasi quis? Ipsum doloremque ducimus, pariatur necessitatibus modi architecto provident. Nam at similique sapiente possimus, ipsa labore?</p>
-<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi amet voluptatibus ipsa! Vero, quasi quis? Ipsum doloremque ducimus, pariatur necessitatibus modi architecto provident. Nam at similique sapiente possimus, ipsa labore?</p>
 
-<h2 id="contacts">Kontaktai</h2>
-<address>gertrudavarnaite@gmail.com</address>
+    <div class="begin">
+        <a href='#begin'>I pradzia..</a>
+    </div>
+    <div class="content">
+        <p>Loremipsum, dolor sit amet consectetur adipisicing elit. Excepturi amet voluptatibus ipsa! Vero, quasi quis?
+            Ipsum doloremque ducimus, pariatur necessitatibus modi architecto provident. Nam at similique sapiente
+            possimus, ipsa labore?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi amet voluptatibus ipsa! Vero, quasi quis?
+            Ipsum doloremque ducimus, pariatur necessitatibus modi architecto provident. Nam at similique sapiente
+            possimus, ipsa labore?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi amet voluptatibus ipsa! Vero, quasi quis?
+            Ipsum doloremque ducimus, pariatur necessitatibus modi architecto provident. Nam at similique sapiente
+            possimus, ipsa labore?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi amet voluptatibus ipsa! Vero, quasi quis?
+            Ipsum doloremque ducimus, pariatur necessitatibus modi architecto provident. Nam at similique sapiente
+            possimus, ipsa labore?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi amet voluptatibus ipsa! Vero, quasi quis?
+            Ipsum doloremque ducimus, pariatur necessitatibus modi architecto provident. Nam at similique sapiente
+            possimus, ipsa labore?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi amet voluptatibus ipsa! Vero, quasi quis?
+            Ipsum doloremque ducimus, pariatur necessitatibus modi architecto provident. Nam at similique sapiente
+            possimus, ipsa labore?</p>
+    </div>
+    <h2 id="contacts">Kontaktai</h2>
+    <address>gertrudavarnaite@gmail.com</address>
 
 </body>
+
 </html>

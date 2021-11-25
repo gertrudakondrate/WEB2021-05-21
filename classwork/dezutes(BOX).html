@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: static;/*toks pozicionavimas yra pagal nutylejima, rasyti nereikia*/
+            width: 100px;
+            min-height: 100px;
+
+            /*galima ilgesni buda 3eilutes, galima su viena. EILES TVARKA YRA SVARBI
+            border-width: 1px;
+            border-style: solid;
+            border-color: black;*/
+
+            border: 1px solid black;
+        }
+
+        .pirmas {
+            /*jeigu norim suapvalinti kampus border radius. Didinant radius apvaleja iki apskritimo(nurodyti puse widht height. Zalias bos su develop ziurint*/
+            position: absolute;
+            border-radius: 50px;
+            overflow: hidden;
+            padding: 5px;
+             /*jeigu - lys po apacia, jeigu ne - lys i prieki*/
+            z-index: 9999;
+        }
+
+        img {
+            /*jeigu darysim %,tuomet paveiksliukas lygiuosis tiksliai i dezute*/
+            width: 100%;
+        }
+
+        .antras {
+            /*position veikia kaip static, bet yra galimybe stumdyti su top*/
+            position: relative;
+            padding: 5px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            /*nenaudoti stumdyti puslapio daliu dideliu, bet galima naudoti stumti vienam zenklui ar mygtukui*/
+            top: 20px;
+            left: 20px;
+
+            /*margin padding veikia panasiai*/
+            /*galima nuiimti remeli ir tiesiog palikti seselini rema*/
+            box-shadow: 0px 0px 5px rgb(255, 0, 0);
+            /*nesimato, bet uzima vieta, display:none isema is konteksto*/
+            /* visibility: hidden;
+            display:none */
+        }
+
+        .trecias {
+            height: 100px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pirmas">
+        <img src="https://static01.nyt.com/images/2021/09/14/science/07CAT-STRIPES/07CAT-STRIPES-mediumSquareAt3X-v2.jpg"
+            alt="">
+    </div>
+    <div class="antras">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, sed! Tempore, voluptatem!
+        Dolores enim labore, aliquam totam sed incidunt ducimus nesciunt consequatur sapiente vero alias exercitationem
+        eum hic minus perferendis.</div>
+    <div class="trecias">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste dicta harum inventore vitae quae
+        aperiam, mollitia dolores perspiciatis nemo iusto possimus soluta vel tempora rerum eaque consequatur, deleniti
+        exercitationem nulla?</div>
+</body>
+
+</html>
