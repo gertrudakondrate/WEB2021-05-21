@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Lenteles</h1>
+    <!-- laikinas borderis -->
+    <table border="1">
+        <tr>
+            <th>Eil. Nr.</th>
+            <th>Pavarde, Vardas</th>
+            <th>Gimimo metai</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Jonaitis Jonas</td>
+            <td>1999</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Pakalnute Onute</td>
+            <td>1999</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Kondrate Gertruda</td>
+            <td>1989</td>
+        </tr>
+    </table>
+
+
+    <h2>Prisijungimo forma</h2>
+    <!-- form naudojame kuomet norime issiusti, "" dalyje rasome serverio/back end'o adresa -->
+    <form action="lenteles.html" method="post">
+        <table>
+            <tr>
+                <td>
+                    <label for="username">Vardas</label>
+                </td>
+                <td>
+                    <input type="text" name="user" id="username">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="password">Slaptazodis</label>
+                </td>
+                <td>
+                    <input type="password" name="pass" id="password">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Prisijungti">
+                </td>
+            </tr>
+
+
+        </table>
+    </form>
+</body>
+
+</html>
