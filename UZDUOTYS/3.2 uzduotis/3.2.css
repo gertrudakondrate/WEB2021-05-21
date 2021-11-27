@@ -1,0 +1,31 @@
+body{
+    background-color: rgb(233, 233, 233);
+}
+
+input[type=text], select, textarea{
+    width: 100%; 
+    padding: 15px; 
+    border: 1px solid #ccc;
+    box-sizing: border-box; 
+    margin-top: 15px; 
+    margin-bottom: 15px;     
+}
+
+form{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input[type=submit] {
+    background-color: rgb(233, 233, 233);
+    color: rgb(0, 0, 0);
+    padding: 12px 20px;
+    border-color: blue;
+    border-radius: 4px;
+    text-align: center;
+  }
+
+  .button{
+      text-align: center;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      box-sizing: border-box; 
+  }

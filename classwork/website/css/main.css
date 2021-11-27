@@ -1,0 +1,118 @@
+header{
+    /*padarius flex teviniam elemente visi viduje esantys elementai pasidaro linijiniai*/
+    display: flex;
+    height: 200px;
+    background-image: url('../images/header.jpg');
+    background-size: cover;
+    align-items: center;  
+    justify-content: center;
+}
+
+h1{
+    text-align: center;
+    color: white;
+    /* pats paprasciausias budas, nerekomenduoja naudoti, gaunasi vertikali apytiksliai*/
+    /* padding: 60px; */
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    align-items: center; /*vertikalus jeigu reikia*/
+    justify-content: center;
+    padding: 0px;
+    background-color: black;
+    /* padding: 8px; - uzdengiam, nes pakeitem li (kad veiktu ant visu ekranu mazinant*/
+    margin-top: 0px;
+}
+
+li{
+    padding: 8px;
+}
+
+a{
+    text-transform: uppercase;
+    padding: 8px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+a:hover{
+    color: black;
+    background-color: rgb(255, 255, 255);
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap; /*elementu nukelimas i kita eilute jeigu netelpa*/
+}
+/*kur yra procentai negalima deti borders, margins ir etc*/
+section{
+    width: 70%;
+    /* background-color: yellow */
+}
+
+.section{
+    /* border: 3px solid black; */
+    padding: 10px;
+}
+
+article{
+    width: 50%;
+    /* background-color: green; */
+}
+
+.article{
+    /* border: 1px solid black; */
+    min-height: 400px;
+    margin: 10px;
+    padding: 10px;
+}
+
+@media screen and (min-width:1050px){
+    .article{
+        min-height: 500px;
+    }
+}
+
+aside{
+    width: 30%;
+    background-color: blue;
+}
+
+img{
+    width: 100%;
+    box-shadow: 2px 2px 5px black;
+    border-top-right-radius: 10px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+}
+
+address{
+    color: white;
+}
+/*media naudojam, kad responsintu skirtingu dydziu ekranu*/
+@media screen and (max-width: 600px){
+    section{
+        width: 100%;
+        /* background-color: yellow */
+    }
+
+    article{
+        width: 100%;
+        /* background-color: green; */
+    }
+
+    aside{
+        width: 100%;
+        background-color: blue;
+    }
+}
