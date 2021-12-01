@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>
+
+    </div>
+
+
+
+
+    <script>
+        let content = "";
+        // naudingas formuojant saraso elementus (pvz prekiu sarasas)
+        // array.lenght istrinti ir irasyti kiek kartu norime kartoti cikla
+        for (let index = 0; index < 6; index++) {
+            //content += "<p>" + index + "</p>";
+            content = content + "<p>" + index + "</p>"; // su tekstu
+
+            //document.querySelector("div").append(index); //tik su skaiciais
+
+        }
+        document.querySelector("div").innerHTML = content;
+    </script>
+</body>
+
+</html>

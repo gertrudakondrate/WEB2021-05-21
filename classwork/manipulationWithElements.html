@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>Labas</div>
+    <p></p>
+
+
+
+
+
+
+
+    <script>
+        let divTekstas = document.querySelector("div").innerText;
+
+        console.log(divTekstas);
+
+        //kuriame paspaudimo ivyki
+        document
+            .querySelector("div").addEventListener("click", function () {
+                //veiksmai, kurie bus atliekami paspaudus and div elemento
+                //alert(divTekstas);
+                document.querySelector("p").innerText = divTekstas;
+                //isimti praeita elementa ir ideti tik nauja
+                //document.querySelector("div").innerHTML = ""
+                document.querySelector("div").innerHTML = "<span>1</span>"; //dinamiskai sukuriamas elementas
+            });
+
+    </script>
+</body>
+
+</html>

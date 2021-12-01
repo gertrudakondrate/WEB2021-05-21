@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="data"></div>
+    <input type="text" name="" id="data" value="">
+
+
+    <script>
+        let data = new Date();
+
+        console.log(data);
+        console.log(data.getFullYear());
+        console.log(data.getMonth());
+        console.log(data.getDate());
+
+
+        let date = data.getFullYear() + '_' +
+            (data.getMonth() + 1) + '_' +
+            data.getDate();
+
+        console.log(date);
+
+        //elementui div priskiriame data. Galioja tiems, kas turi pradzia ir pabaiga
+        document.querySelector(".data").innerText = date;
+
+        //input priskiriam reiksme
+        document.getElementById("data").value = date;
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        li {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" name="" id="item">
+    <input type="button" id="add" value="prideti">
+    <button>Rodyk prekiu krepseli</button>
+    <button>Isvalyti prekiu krepseli</button>
+    <ul></ul>
+
+
+
+
+
+    <script src="js/pasibandymai.js"></script>
+    <script>
+        let shopingCart = getShopingCart();
+        //console.log(shopingCart);
+        //alert(shopingCart);
+
+        //array reiskia masyva, siuo atveju shopingCart
+
+        //pridetojas
+        document
+            .querySelector("#add")
+            .addEventListener("click", function () {
+                let item = document.querySelector("#item").value; //formos elementams - inputams, mygtukams etc
+                document.querySelector("#item").value = "";
+
+                if (item != "" && shopingCart.indexOf(item) == -1) {
+                    shopingCart.push(item);
+                }
+
+                fillList(shopingCart, document.querySelector("ul"));
+
+
+            });
+
+        //vaizduotojas
+        document
+            .querySelectorAll("button")[0]
+            .addEventListener("click", function () {
+
+                fillList(shopingCart, document.querySelector("ul"));
+
+            });
+
+        //valytojas
+        document
+            .querySelectorAll("button")[1]
+            .addEventListener("click", function () {
+                document.querySelector("ul").innerHTML = "";
+
+            });
+
+        document
+            .querySelector("#item")
+            .addEventListener("keydown", function (event) {
+                let key = event.key;
+
+                if (key == "Enter") {
+                    let item = document.querySelector("#item").value; //formos elementams - inputams, mygtukams etc
+                    document.querySelector("#item").value = "";
+
+                    if (item != "" && shopingCart.indexOf(item) == -1) {
+                        shopingCart.push(item);
+                    }
+
+                    fillList(shopingCart, document.querySelector("ul"));
+                }
+            })
+
+
+
+
+    </script>
+</body>
+
+</html>
