@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Pirmas skaicius: <input type="text" id="firstNumber" />
+    Antras skaicius: <input type="text" id="secondNumber" />
+
+    <input type="button" onClick="divideBy()" Value="Divide" />
+
+    <p>Rezultatas: <br>
+        <span id="result"></span>
+    </p>
+
+
+    <script>
+    function divideBy() 
+{ 
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+document.getElementById("result").innerHTML = num1 / num2;
+}
+
+
+</script>
+</body>
+
+</html>
