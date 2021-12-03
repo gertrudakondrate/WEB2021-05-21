@@ -5,21 +5,21 @@ function add(number1, number2) {
 }
 
 
-// function getShopingCart() {
-//     return ["Morkos", "Bulves", "Cesnakai"];
-// }
+function getShopingCart() {
+    return ["Morkos", "Bulves", "Cesnakai"];
+ }
 
-// function fillList(array, targetElement) {
-//     targetElement.innerHTML = "";
+function fillList(array, targetElement) {
+    targetElement.innerHTML = "";
 
 
 
-//     for (let index = 0; index < array.length; index++) {
-//         const element = array[index];
+   for (let index = 0; index < array.length; index++) {
+       const element = array[index];
 
-//         let li = document.createElement("li"); //sukuriamas elementas
-//         li.innerText = element; //li elementui priskiramas tekstas is masyvo
+         let li = document.createElement("li"); //sukuriamas elementas
+       li.innerText = element; //li elementui priskiramas tekstas is masyvo
 
-//         targetElement.append(li); //suformuota li elementa idedame i ul elementa
-//     }
-// }
+        targetElement.append(li); //suformuota li elementa idedame i ul elementa
+    }
+}

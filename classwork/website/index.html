@@ -7,32 +7,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
+
 </head>
 
 <body>
+
+    <div>
+        <select name="" id="languageCharger">
+            <option value="en">en</option>
+            <option value="lt">lt</option>
+        </select>
+    </div>
+
     <header>
         <h1>MY SPACE</h1>
     </header>
     <nav>
         <ul>
-            <li><a href="">Pagrindinis</a></li>
-            <li><a href="">Paslaugos</a></li>
-            <li><a href="">Kontaktai</a></li>
+            <li><a href="" translation-menu-main>Pagrindinis</a></li>
+            <li><a href="" translation-menu-services>Paslaugos</a></li>
+            <li><a href="" translation-menu-contacts>Kontaktai</a></li>
         </ul>
     </nav>
     <div class="row">
         <section>
-            <div class="section row"> <!-- uzdedam div, kad galetume daryti remus etc -->
+            <div class="section row">
+                <!-- uzdedam div, kad galetume daryti remus etc -->
                 <article>
                     <div class="article">
-                        <img src="https://i.insider.com/5484d9d1eab8ea3017b17e29?width=600&format=jpeg&auto=webp" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aliquam, expedita id hic distinctio maiores at aliquid earum ipsam consectetur iste velit delectus quos dignissimos rerum animi, a amet minus?</p>
+                        <img src="https://i.insider.com/5484d9d1eab8ea3017b17e29?width=600&format=jpeg&auto=webp"
+                            alt="">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aliquam, expedita id hic
+                            distinctio maiores at aliquid earum ipsam consectetur iste velit delectus quos dignissimos
+                            rerum animi, a amet minus?</p>
                     </div>
                 </article>
                 <article>
                     <div class="article">
                         <img src="https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png" alt="">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos aspernatur delectus fugiat nostrum quod optio iusto nobis earum mollitia molestias, provident architecto quis adipisci. Temporibus iure laboriosam earum praesentium maiores.</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos aspernatur delectus fugiat
+                            nostrum quod optio iusto nobis earum mollitia molestias, provident architecto quis adipisci.
+                            Temporibus iure laboriosam earum praesentium maiores.</p>
                     </div>
                 </article>
             </div>
@@ -43,6 +58,46 @@
     <footer>
         <address>gertrudavarnaite@gmail.com</address>
     </footer>
+
+    <script src="js/translations.js"></script>
+    <script>
+        //pasiimame local storage objekta
+        let localStorage = window.localStorage;
+        //lang - language. Pasitikriname ar jau yra issaugotas language reiksme
+        let lang = localStorage.getItem("language");
+
+        if (!lang) { //ar nera uzsetintas/priskirtas/issaugotas lang
+            lang = document.querySelector("#languageCharger").value; //value - pasiimti reiksme
+        }
+        else {
+            document.querySelector("#languageCharger").value = lang; //svarbiausia eilute
+        }
+
+
+        doTranslations(lang);
+
+
+        document
+            .querySelector("#languageCharger")
+            .addEventListener("change", function () {
+                doTranslations(this.value);
+                localStorage.setItem("language", this.value) //this - siuo atveju yra dropdown
+            });
+
+
+
+        function doTranslations(kalba) {
+            let translation = getTranslation(kalba);
+            
+            document.querySelector("[translation-menu-main]").innerText = translation.menu.main;
+            document.querySelector("[translation-menu-services]").innerText = translation.menu.services;
+            document.querySelector("[translation-menu-contacts]").innerText = translation.menu.contacts;
+
+        }
+
+
+
+    </script>
 </body>
 
 </html>

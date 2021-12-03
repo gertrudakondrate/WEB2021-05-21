@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .profilis {
+            width: 250px;
+            border: 1px solid black;
+        }
+
+        .profilis img {
+            width: 100%;
+        }
+    </style>
 </head>
+
 <body>
-    
 
-
-
-
+    <div class="profilis"></div>
 
     <script>
         //json 
@@ -20,9 +30,45 @@
             surname: "Jonaitis",
             age: 25,
             hair: "Red",
-            isAdult: true
+            isAdult: true,
+            photo: "https://www.southwestjournal.com/wp-content/uploads/2018/11/shutterstock_1075355216.jpg"
+
         };
+
         console.log(student);
+        // alert(student);
+
+        console.log(student.name + ", grazus vardas");
+
+        //su nuotrauka
+        let nuotraukosEilute = document.createElement("img");
+        nuotraukosEilute.setAttribute("src", student.photo);
+        document.querySelector(".profilis").append(nuotraukosEilute);
+
+        let vardoIrPavardesEilute = document.createElement("div"); //sukurti elementa atminty
+        vardoIrPavardesEilute.innerText = student.name + " " + student.surname; //i elementa idedu studento varda ir pavarde
+        document.querySelector(".profilis").append(vardoIrPavardesEilute); //kad vaizduotu ekrane
+
+        let amziausEilute = document.createElement("div");
+        amziausEilute.innerText = "Amzius " + student.age;
+        document.querySelector(".profilis").append(amziausEilute);
+
+        let statusoEilute = document.createElement("div");
+
+        let statusas = "Pilnametis";
+        if (!student.isAdult) { //klausia ar ne adult
+            statusas = "Nepilnametis";
+        }
+
+        statusoEilute.innerText = statusas;
+        document.querySelector(".profilis").append(statusoEilute);
+
+
+
+
+
+
     </script>
 </body>
+
 </html>

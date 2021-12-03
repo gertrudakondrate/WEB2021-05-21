@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="profilis">
+        <!-- <div>{{name}}</div>
+        <div>{{age}}</div>
+        <div>{{status}}</div>
+        <img src="{{photo}}" alt=""> NEBEREIKALINGAS, kadangi jau aisku ka isideti i elementa per minify--> 
+    </div>
+
+    
+    <script>
+        let student = {
+            name: "Jonas",
+            surname: "Jonaitis",
+            age: 25,
+            hair: "Red",
+            isAdult: true,
+            photo: "https://www.southwestjournal.com/wp-content/uploads/2018/11/shutterstock_1075355216.jpg" //visas sitas objektas
+        };
+
+        let template = '<div>{{name}}</div><div>Amzius: {{age}}</div><div>{{status}}</div><img src="{{photo}}" alt="">'; //placeholder {{}}
+
+        template = template.replace('{{name}}', student.name + " " + student.surname);
+        template = template.replace('{{age}}', student.age);
+
+        let status = "Pilnametis";
+        if (!student.isAdult) {
+            status = "Nepilnametis";
+        }
+
+        template = template.replace('{{status}}', status);
+        template = template.replace('{{photo}}', student.photo);
+
+        console.log(template); //pasitikrinti ar veikia
+
+        document.querySelector(".profilis").innerHTML = template; //append neveiks - veikia tik su sukurtais elementais. TEMPLATE YRA HTML PARASYTAS TEKSTAS
+        
+    </script>
+</body>
+
+</html>

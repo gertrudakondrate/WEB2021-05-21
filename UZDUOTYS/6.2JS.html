@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Iveskite savo amziu:<input id="age" />
+    <button onclick="verify()">Tikrinti</button>
+
+
+    <script>
+
+        function verify() {
+            let amzius;
+            amzius = Number(document.getElementById("age").value);
+            if (amzius >= 18) {
+                alert("I svetaine uzeiti galite");
+            }
+            else {
+                alert("Atsiprasome, bet i svetaine uzeiti negalite");
+            }
+        }
+
+    </script>
+</body>
+
+</html>

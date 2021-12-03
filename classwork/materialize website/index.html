@@ -15,13 +15,17 @@
         div.image img {
             width: 100%;
         }
-        
-        footer{
+
+        footer {
             display: flex;
             height: 100vh;
             justify-content: center;
             align-items: center;
             font-size: 40pt;
+        }
+
+        .myrow {
+            display: flex;
         }
     </style>
     <!--Let browser know website is optimized for mobile-->
@@ -63,17 +67,19 @@
                 facere amet sunt delectus labore excepturi eligendi, laborum quae eaque dolores ad pariatur voluptatem a
                 distinctio.</p>
 
-            <div class="image">
-                <div>
-                    <img src="images/cat.jpg" class="materialboxed" alt="">
-                </div>
-                <div>
-                    <img src="images/cat.jpg" class="materialboxed" alt="">
-                </div>
-                <div>
-                    <img src="images/cat.jpg" class="materialboxed" alt="">
-                </div>
+            <div class="myrow">
+                <!-- <div class="images">
+                    <div>
+                        <img src="images/cat.jpg" class="materialboxed" alt="" title="">
+                    </div>
+                    <div>
+                        <img src="images/cat.jpg" class="materialboxed" alt="" title="">
+                    </div>
+                    <div>
+                        <img src="images/cat.jpg" class="materialboxed" alt="" title="">
+                    </div>
 
+                </div> -->
             </div>
         </div>
     </div>
@@ -98,6 +104,9 @@
 
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <script src="js/data.js"></script>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var elems = document.querySelectorAll('.sidenav');
@@ -115,6 +124,26 @@
             var elems = document.querySelectorAll('.materialboxed');
             var instances = M.Materialbox.init(elems, {});
         });
+
+    </script>
+    <script>
+        let images = getImages();
+
+        let htmlGallery = "";
+
+        for (let index = 0; index < images.length; index++) {
+            const imageObject = images[index]; //const reiskia konstanta, kuri nekinta
+
+            let template = '<div class="image"><img src="{{photo}}" class="materialboxed" alt="" title="{{title}}"></div>';
+
+            template = template.replace('{{photo}}', imageObject.photo);
+            template = template.replace('{{title}}', imageObject.title);
+            htmlGallery += template;
+        }
+
+        document.querySelector(".myrow").innerHTML = htmlGallery;
+
+        console.log(images); //
 
     </script>
 </body>

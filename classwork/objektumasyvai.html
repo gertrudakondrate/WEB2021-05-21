@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let students = [];
+
+        let student1 = {
+            name: "Jonas",
+            surname: "Jonaitis"
+        };
+
+        let student2 = {
+            name: "Onute",
+            surname: "Pakalnute"
+        };
+
+        students.push(student1); //idedam i masyva
+        students.push(student2);
+
+        console.log(students); //pasitikrinam ar veikia
+
+        console.log(students[1].name); //
+
+        for (let index = 0; index < students.length; index++) {
+            const student = students[index];
+            console.log(student.name); //
+        }
+
+
+    </script>
+</body>
+</html>
