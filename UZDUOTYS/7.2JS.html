@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* box-sizing: border-box; */
+        }
+
+        .container {
+            width: 100%;
+            /* min-height: 100vh; */
+            display: flex;
+            /* align-items: center;
+            justify-content: center; */
+        }
+
+        .gallery{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+            grid-gap: 30px;
+        }
+
+        .gallery img{
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Galerija</h1>
+
+    <div class="container">
+        <div class="gallery">
+            <a href="7.2images/bycycle.jpg"><img src="7.2images/bycycle.jpg" alt="bycycle"></a>
+            <a href="7.2images/chess.jpg"><img src="7.2images/chess.jpg" alt="chess"></a>
+            <a href="7.2images/jump.jpg"><img src="7.2images/jump.jpg" alt="jump"></a>
+            <a href="7.2images/kiting.jpg"><img src="7.2images/kiting.jpg" alt="kiting"></a>
+            <a href="7.2images/lion.jpg"><img src="7.2images/lion.jpg" alt="lion"></a>
+            <a href="7.2images/onwater.jpg"><img src="7.2images/onwater.jpg" alt="water"></a>
+            <a href="7.2images/para.jpg"><img src="7.2images/para.jpg" alt="sky"></a>
+            <a href="7.2images/photographer.jpg"><img src="7.2images/photographer.jpg" alt="photographer"></a>
+            <a href="7.2images/pieva.jpg"><img src="7.2images/pieva.jpg" alt="grass"></a>
+            <a href="7.2images/supynes.jpg"><img src="7.2images/supynes.jpg" alt="swing"></a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
