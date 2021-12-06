@@ -12,13 +12,13 @@
 <body>
 
     <header>
-        <h1>GERTRUDA VARNAITE <span style="display: block;">PHOTOGRAPHY</span></h1>
+        <!-- <h1>GERTRUDA VARNAITE <span>PHOTOGRAPHY</span></h1> -->
     </header>
     <div class="topnav">
-        <a class="active" href="index.html">WORK</a>
+        <!-- <a class="active" href="index.html">WORK</a>
         <a href="instagram/instagram.html">INSTAGRAM</a> 
-        <a href="contact/contact.html">CONTACT</a>
-      </div>
+        <a href="contact/contact.html">CONTACT</a> -->
+      </div> 
 
       <div class="image-grid">
         <img class="image" src="websiteImages/1.jpg" alt="portrait">
@@ -28,6 +28,10 @@
       </div>
 
       <script src="jswebsite.js"></script>
+      <script>
+          createHeader(document.querySelector('header'));
+          createTopNav(document.querySelector('.topnav'));
+      </script>
 </body>
 
 </html>
