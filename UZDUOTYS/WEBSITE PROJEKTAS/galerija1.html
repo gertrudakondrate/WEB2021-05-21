@@ -10,17 +10,34 @@
 </head>
 
 <body>
-    <header>
-    </header>
+    <header></header>
 
-    <div class="topnav">
+    <div class="topnav"></div>
+
+    <div class="image-grid">
+        <div class="text">
+            <p>HAIR BY ROBEEN</p>
+        </div>
     </div>
 
 
-    <script src="jswebsite.js"></script>
+    <script src="websiteJS/imagedata.js"></script>
+    <script src="websiteJS/jswebsite.js"></script>
     <script>
         createHeader(document.querySelector('header'));
         createTopNav(document.querySelector('.topnav'));
+
+        let images = getImagesGallery1();
+
+        for (let index = 0; index < images.length; index++) {
+            const imageObject = images[index];
+
+            let template = '<div><img src="{{photo}}" alt="{{alt}}"></div>';
+
+            template = template.replace('{{photo}}', imageObject.photo);
+            template = template.replace('{{alt}}', imageObject.title);
+            document.querySelector(".image-grid").innerHTML += template;
+        }
     </script>
 </body>
 

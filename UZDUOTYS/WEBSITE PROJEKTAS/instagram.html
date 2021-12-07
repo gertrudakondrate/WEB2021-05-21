@@ -12,25 +12,41 @@
         #curator-feed-default-feed-layout {
             margin-top: 50px;
         }
+
+        .instagramText {
+            text-decoration: none;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Futura;
+        }
+
+        .instagramText a {
+            text-decoration: none;
+            color: rgb(26, 26, 26);
+        }
+
+        .instagramText a:hover {
+            color: rgb(160, 160, 160);
+        }
     </style>
 </head>
 
 <body>
-    <header>
-    </header>
+    <header></header>
 
-    <div class="topnav">
+    <div class="topnav"></div>
+
+    <div class="instagramText">
+        <p><a href="https://www.instagram.com/gertrudavarnaite/">@gertrudavarnaite</a></p>
     </div>
-
     <div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank"
             class="crt-logo crt-tag">Powered by Curator.io</a></div>
 
-
-
-    <!-- <script
-        type="text/javascript">(function () { var i, e, d = document, s = "script"; i = d.createElement("script"); i.async = 1; i.charset = "UTF-8"; i.src = "https://cdn.curator.io/published/23d24116-55ed-4f31-9c5d-46f5e4a82ed6.js"; e = d.getElementsByTagName(s)[0]; e.parentNode.insertBefore(i, e); })();</script> -->
+            
     <script src="https://cdn.curator.io/published/23d24116-55ed-4f31-9c5d-46f5e4a82ed6.js"></script>
-    <script src="jswebsite.js"></script>
+    <script src="websiteJS/jswebsite.js"></script>
     <script>
         createHeader(document.querySelector('header'));
         createTopNav(document.querySelector('.topnav'));
