@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link type="text/css" rel="stylesheet" href="csswebsite.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="websiteCSS/csswebsite.css" media="screen,projection" />
 </head>
 
 <body>
@@ -32,7 +32,7 @@
         for (let index = 0; index < images.length; index++) {
             const imageObject = images[index];
 
-            let template = '<div><img src="{{photo}}" alt="{{alt}}"></div>';
+            let template = '<div><img src="{{photo}}" alt="{{title}}"></div>';
 
             template = template.replace('{{photo}}', imageObject.photo);
             template = template.replace('{{alt}}', imageObject.title);
