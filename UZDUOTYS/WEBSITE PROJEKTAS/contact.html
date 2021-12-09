@@ -24,7 +24,7 @@
             color: rgb(160, 160, 160);
         }
 
-        .orText{
+        .orText {
             font-style: normal;
             font-family: Futura;
             color: rgb(160, 160, 160);
@@ -32,17 +32,15 @@
             margin-top: 20px;
         }
 
-        .container{
+        .container {
             color: rgb(20, 20, 20);
             font-style: normal;
             font-family: Futura;
-           padding: 0 auto;
+            padding: 0 auto;
             margin-top: 60px;
-            
-            
         }
 
-        section{
+        section {
             height: 100%;
             width: 100%;
             display: flex;
@@ -51,88 +49,83 @@
             flex-direction: column;
         }
 
-        .form-group input
-        .form-group textarea{
+        .form-group input .form-group textarea {
             width: 100%;
         }
 
-        textarea{
+        textarea {
             resize: vertical;
         }
 
-        button[type="submit"]{
-           width: 100%; 
-           border: none;
-           outline: none;
-           background-color: white;
-           font-style: normal;
+        button[type="submit"] {
+            width: 100%;
+            border: none;
+            outline: none;
+            background-color: white;
+            font-style: normal;
             font-family: Futura;
             text-align: center;
         }
 
-        button[type="submit"]:hover{
+        button[type="submit"]:hover {
             color: rgb(160, 160, 160);
         }
 
-        #status{
+        #status {
             text-align: center;
             border-radius: 8px;
             font-style: normal;
             font-family: Futura;
         }
 
-        #status.messageSent{
+        #status.messageSent {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            animation: status 1s ease forwards;
+        }
+
+        #status.error {
             background-color: rgb(255, 255, 255);
             color: rgb(0, 0, 0);
             animation: status 1s ease forwards;
         }
 
         @keyframes status {
-            0%{
-                opacity: 1;
-                pointer-events: all;
-            } 
-            90%{
+            0% {
                 opacity: 1;
                 pointer-events: all;
             }
-            100%{
+
+            90% {
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            100% {
                 opacity: 0;
                 pointer-events: none;
             }
-            
         }
-        
-
-        
     </style>
 </head>
 
 <body>
-    <header>
-    </header>
+    <header></header>
 
-    <div class="topnav">
-    </div>
-
-
-    
+    <div class="topnav"></div>
 
     <section>
         <div class="container">
-            <form action="https://formspree.io/f/xpzbzwvk" method="post" id="my-form">
+            <form action="https://formspree.io/f/xpzbzwvk" method="POST" id="my-form">
                 <div class="form-group">
                     <label for="message"></label>
                     <textarea name="message" id="message" cols="30" rows="10"></textarea>
                 </div>
-
                 <button type="submit">SEND</button>
-
-
             </form>
         </div>
 
-        <div id="status" class="messageSent">Message sent</div>
+        <div id="status"></div>
     </section>
     <div class="orText">or contact directly</div>
     <address>
@@ -141,7 +134,6 @@
     </address>
 
 
-     
     <script src="websiteJS/jswebsite.js"></script>
     <script src="./contact.html"></script>
     <script>
@@ -149,26 +141,26 @@
         createTopNav(document.querySelector('.topnav'));
 
         var form = document.getElementById("my-form");
-    
-    async function handleSubmit(event) {
-      event.preventDefault();
-      var status = document.getElementById("status");
-      var data = new FormData(event.target);
-      fetch(event.target.action, {
-        method: form.method,
-        body: data,
-        headers: {
-            'Accept': 'application/json'
+
+        async function handleSubmit(event) {
+            event.preventDefault();
+            var status = document.getElementById("status");
+            var data = new FormData(event.target);
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                status.classList.add("messageSent");
+                status.innerHTML = "Message sent";
+                form.reset()
+            }).catch(error => {
+                status.innerHTML = "Oops! There was a problem submitting your form"
+            });
         }
-      }).then(response => {
-          status.classList.add("messageSent");
-        status.innerHTML = "Message sent";
-        form.reset()
-      }).catch(error => {
-        status.innerHTML = "Oops! There was a problem submitting your form"
-      });
-    }
-    form.addEventListener("submit", handleSubmit)
+        form.addEventListener("submit", handleSubmit)
     </script>
 </body>
 
